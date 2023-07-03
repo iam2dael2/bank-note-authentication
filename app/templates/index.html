@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<style>
+    .form {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        flex-direction: column;
+    }
+    table{
+        padding: 10px;
+        border-spacing: 10px;
+    }
+</style>
+<title>Bank Note Authentication</title>
+{% endblock %}
+
+{% block body %}
+<h1 style="text-align: center;">Bank Note Authentication</h1>
+<div class="form">
+    <form action="/" method="POST">
+        <table>
+            <tr>
+                <td><label for="variance">Input Variance</label></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="variance" name="variance" value="0"></td>
+            </tr>
+
+            <tr>
+                <td><label for="skewness">Input Skewness</label></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="skewness" name="skewness" value="0"></td>
+            </tr>
+
+            <tr>
+                <td><label for="curtosis">Input Curtosis</label></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="curtosis" name="curtosis" value="0"></td>
+            </tr>
+
+            <tr>
+                <td><label for="entropy">Input Entropy</label></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="entropy" name="entropy" value="0"></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Predict"></td>
+            </tr>
+        </table>
+    </form>
+    <div>
+        {% if output %}
+            <p>{{ output }}</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

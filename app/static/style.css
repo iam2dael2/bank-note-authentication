@@ -1,0 +1,6 @@
+body{
+    font-family: sans-serif;
+    background-image: url('/static/images/bank_note.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
